@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1089975698754",
+    "project_id": "meetie-a-meeting-app",
+    "storage_bucket": "meetie-a-meeting-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089975698754:android:1397dd8e1968089b9fb4db",
+        "android_client_info": {
+          "package_name": "com.example.meetie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089975698754-l2nufne7q3v54kanrqplbil596t7lj9s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuOK7dtsjHc0BdbabDWb2gPQ3myPrbA6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089975698754-l2nufne7q3v54kanrqplbil596t7lj9s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1089975698754-0b8hvo3c593v993q0p74kimbsn58tsab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.meetie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
