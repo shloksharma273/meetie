@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:meetie/resources/auth_methods.dart';
 import 'package:meetie/screens/home_screens.dart';
 import 'package:meetie/screens/login_screen.dart';
 import 'package:meetie/utils/colors.dart';
@@ -26,7 +27,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const LoginScreen(),
+      home: StreamBuilder(stream: AuthMethods().authChanges, builder: (context, snapshot) {
+        if( snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator(),);
+        }
+        if(snapshot.hasData){
+          return const HomeScreens();
+        }
+        // return const LoginScreens();
+        return const HomeScreens();
+      }),
     );
   }
 }
