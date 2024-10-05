@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:meetie/utils/colors.dart';
 import 'package:meetie/widgets/home_meeting_button.dart';
 
+import 'meeting_screen.dart';
+
 class HomeScreens extends StatefulWidget {
   const HomeScreens({super.key});
 
@@ -17,6 +19,10 @@ class _HomeScreensState extends State<HomeScreens> {
     });
   }
 
+  List<Widget> pages = [
+    MeetingScreen()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,38 +32,7 @@ class _HomeScreensState extends State<HomeScreens> {
         title: const Text("Meet and Chat"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              HomeMeetingButton(
-                  onPressed: () {}, text: 'New Meeting', icon: Icons.videocam),
-              HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'Join Meeting',
-                  icon: Icons.add_box_rounded),
-              HomeMeetingButton(
-                  onPressed: () {},
-                  text: 'Schedule a Meet',
-                  icon: Icons.calendar_today),
-              HomeMeetingButton(
-                onPressed: () {},
-                text: 'Share Screen',
-                icon: Icons.arrow_upward_rounded,
-              ),
-            ],
-          ),
-          const Expanded(
-            child: Center(
-              child: Text('Create/Join Meetings with just a click!', style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20
-              ),),
-            ),
-          ),
-        ],
-      ),
+      body: pages[_page],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: footerColor,
         selectedItemColor: Colors.white,
@@ -74,10 +49,9 @@ class _HomeScreensState extends State<HomeScreens> {
               icon: Icon(Icons.person_outline), label: 'Contacts'),
           BottomNavigationBarItem(
               icon: Icon(Icons.settings_outlined), label: 'Settings'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.comment_bank), label: 'Meet & Char'),
         ],
       ),
     );
   }
 }
+
