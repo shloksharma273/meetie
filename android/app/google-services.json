@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1089975698754-6tuf5ndas8jg3sn99g70qu2nhs7o12ql.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.meetie",
+            "certificate_hash": "85b0048b972e2eb34f50cfe6c9c8c7c8f970e8d5"
+          }
+        },
+        {
           "client_id": "1089975698754-l2nufne7q3v54kanrqplbil596t7lj9s.apps.googleusercontent.com",
           "client_type": 3
         }

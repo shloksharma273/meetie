@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:meetie/resources/auth_methods.dart';
 import 'package:meetie/screens/home_screens.dart';
 import 'package:meetie/screens/login_screen.dart';
+import 'package:meetie/screens/vido_call_screen.dart';
 import 'package:meetie/utils/colors.dart';
 
 void main() async {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/home' : (context) => const HomeScreens(),
+        '/video-call' : (context) => const VideoCallScreen(),
       },
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
@@ -34,8 +36,8 @@ class MyApp extends StatelessWidget {
         if(snapshot.hasData){
           return const HomeScreens();
         }
-        // return const LoginScreens();
-        return const HomeScreens();
+        return const LoginScreen();
+        // return const HomeScreens();
       }),
     );
   }

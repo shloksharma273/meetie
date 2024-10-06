@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meetie/screens/history_meeting_screen.dart';
 import 'package:meetie/utils/colors.dart';
 import 'package:meetie/widgets/home_meeting_button.dart';
 
@@ -20,7 +21,8 @@ class _HomeScreensState extends State<HomeScreens> {
   }
 
   List<Widget> pages = [
-    MeetingScreen()
+    MeetingScreen(),
+    const HistoryMeetingScreen(),
   ];
 
   @override
